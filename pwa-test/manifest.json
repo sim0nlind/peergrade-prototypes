@@ -17,7 +17,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/login",
+  "start_url": "https://sim0nlind.github.io/peergrade-prototypes/pwa-test/",
   "background_color": "#006CFA",
   "display": "standalone",
   "scope": "/",
