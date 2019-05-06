@@ -2,48 +2,81 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Eduflow</title>
-    <link rel="shortcut icon" href="favicon.png" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="content">
-        <img
-          src="assets/logo.svg"
-          alt="Eduflow logo"
-          class="animate-in animation-delay-1"
-        />
-        <h2 class="animate-in animation-delay-2">User test</h2>
-        <h1 class="animate-in animation-delay-2">
-          New product features in Eduflow
-        </h1>
-        <p class="animate-in animation-delay-3">
-          First of all, thank you for taking the time to do this user test! It
-          is with feedback like yours that we are able to build the best tool
-          for teaching and learning.
-        </p>
-        <button
-          class="animate-in animation-delay-4"
-          onclick="dismissIntro(this)"
-        >
-          Start test
-        </button>
-      </div>
-    </div>
-    <iframe
-      style="border: none;"
-      width="1452"
-      height="900"
-      src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FWmtKkAw5bTkmzqxqED1yy9o2%2FEduflow-MVP%3Fnode-id%3D0%253A1%26viewport%3D514%252C25%252C0.165131%26scaling%3Dmin-zoom"
-      allowfullscreen
-    ></iframe>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
-    <script type="text/javascript">
-      function dismissIntro(e) {
-        e.parentNode.parentNode.remove();
+    <!-- From https://medium.com/@applification/progressive-web-app-splash-screens-80340b45d210 -->
+    <link
+      rel="apple-touch-startup-image"
+      href="images/splash/splash-640x1136.png"
+      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="images/splash/splash-750x1294.png"
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="images/splash/splash-1242x2148.png"
+      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="images/splash/splash-1125x2436.png"
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="images/splash/splash-1536x2048.png"
+      media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="images/splash/splash-1668x2224.png"
+      media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="images/splash/splash-2048x2732.png"
+      media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+
+    <!-- From https://www.pwabuilder.com/serviceworker -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        if (navigator.serviceWorker.controller) {
+          console.log(
+            "[PWA Builder] active service worker found, no need to register"
+          );
+        } else {
+          // Register the service worker
+          navigator.serviceWorker
+            .register("sw.js", {
+              scope: "./"
+            })
+            .then(function(reg) {
+              console.log(
+                "[PWA Builder] Service worker has been registered for scope: " +
+                  reg.scope
+              );
+            });
+        }
       }
     </script>
+
+    <style>
+      body {
+        background: greenyellow;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    This is an awesome web app
   </body>
 </html>

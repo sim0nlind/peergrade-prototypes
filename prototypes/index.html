@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eduflow</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <img
+          src="assets/logo.svg"
+          alt="Eduflow logo"
+          class="animate-in animation-delay-1"
+        />
+        <h2 class="animate-in animation-delay-2">User test</h2>
+        <h1 class="animate-in animation-delay-2">
+          New product features in Eduflow
+        </h1>
+        <p class="animate-in animation-delay-3">
+          First of all, thank you for taking the time to do this user test! It
+          is with feedback like yours that we are able to build the best tool
+          for teaching and learning.
+        </p>
+        <button
+          class="animate-in animation-delay-4"
+          onclick="dismissIntro(this)"
+        >
+          Start test
+        </button>
+      </div>
+    </div>
+    <iframe
+      style="border: none;"
+      width="1452"
+      height="900"
+      src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FWmtKkAw5bTkmzqxqED1yy9o2%2FEduflow-MVP%3Fnode-id%3D0%253A1%26viewport%3D514%252C25%252C0.165131%26scaling%3Dmin-zoom"
+      allowfullscreen
+    ></iframe>
+
+    <script type="text/javascript">
+      function dismissIntro(e) {
+        e.parentNode.parentNode.remove();
+      }
+    </script>
+  </body>
+</html>
