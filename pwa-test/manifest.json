@@ -1,0 +1,25 @@
+{
+  "dir": "ltr",
+  "lang": "en",
+  "short_name": "Eduflow",
+  "name": "Eduflow",
+  "description": "Learning is more than just videos & quizzes",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/pwa/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/pwa/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/login",
+  "background_color": "#006CFA",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#FFF"
+}
