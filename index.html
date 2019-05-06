@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="manifest" href="manifest-bust1.json" />
+    <link rel="manifest" href="manifest.json" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#fff" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -71,14 +71,27 @@
 
     <style>
       body {
-        background: lightcoral;
+        font-family: sans-serif;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
       }
     </style>
     <title>PWA fuck yea</title>
   </head>
   <body>
-    Web apps are super smooth, but I have a hard time getting them setup
-    <a href="pwa/icon-192x192.png">Link to image</a>
-    <a href="index.html">Link to homepage</a>
+    <p>
+      Heyoooo, I am a web app. If you're on an android phone there should be a
+      prompt to install me on your homescreen.
+    </p>
+    <p>
+      If you save the app to your home screen and you're offline you should see
+      a message that you're offline message and need to connect to the internet.
+      That is implemented with a service worker.
+    </p>
   </body>
 </html>
