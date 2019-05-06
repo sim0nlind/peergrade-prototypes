@@ -17,7 +17,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "index.html",
+  "start_url": "https://eduflow.herokuapp.com/",
   "theme_color": "#FFF",
   "background_color": "#006CFA",
   "display": "standalone"
